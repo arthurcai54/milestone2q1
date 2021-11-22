@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <h1>Create your devcard</h1>
+
+    <div class="center">
+      <form action="/create" method="post">
+      <input type="text" id="Your full name:" placeholder="Type name here" name="name">
+      
+      <br><br>
+      
+      <input type="text" id="About me" placeholder="About me" name="about" size="50">
+      <br><br>
+      
+      
+      <h2>Technologies you know</h2><br>
+        <input type="checkbox" id="language1" name="language1" value="HTML">
+        <label for="language1"> HTML </label><br>
+        <input type="checkbox" id="language2" name="language2" value="CSS">
+        <label for="language2"> CSS </label><br>
+        <input type="checkbox" id="language3" name="language3" value="JS">
+        <label for="language3"> JS </label><br><br>
+        <input type="checkbox" id="language4" name="language4" value="Git">
+        <label for="language4"> Git </label><br>
+        <input type="checkbox" id="language5" name="language5" value="React">
+        <label for="language5"> React </label><br>
+        <input type="checkbox" id="language6" name="language6" value="Node.js">
+        <label for="language6"> Node.js </label><br><br>
+        
+      <input type="text" id="Github URL" name="github url"
+      placeholder="Github URL" size=50>
+      <br><br>
+      
+      <input type="text" id="Twitter URL" name="twitter url"
+      placeholder="Twitter URL" size=50>
+      <br><br>
+      
+      <input type="text" id="Favourite Books" name="fav books"
+      placeholder="Favourite Books (separated by comma)" size=100>
+      <br><br>
+      
+      <input type="text" id="Favourite Authors (separated by comma)" name="fav authors"
+      placeholder="Favourite Books (separated by comma)" size=100>
+      <br><br>
+      
+      <button type="submit">Create Site</button>
+      </form>
+    </div>
+
+  </body>
+</html>

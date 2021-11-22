@@ -1,0 +1,16 @@
+h1 { 
+    text-align: center;
+    color: red;
+}
+h2 { 
+    text-align: center;
+    color: blue;
+}
+
+button {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
