@@ -12,11 +12,13 @@
 
     <div class="center">
       <form action="/create" method="post">
-      <input type="text" id="Your full name:" placeholder="Type name here" name="name">
+      <label for="name">Your full name:</label>
+      <input type="text" id="name" placeholder="Type name here" name="name">
       
       <br><br>
       
-      <input type="text" id="About me" placeholder="About me" name="about" size="50">
+      <label for="about">About me:</label>
+      <input type="text" id="about" placeholder="About me" name="about" size="50">
       <br><br>
       
       
@@ -26,7 +28,7 @@
         <input type="checkbox" id="language2" name="language2" value="CSS">
         <label for="language2"> CSS </label><br>
         <input type="checkbox" id="language3" name="language3" value="JS">
-        <label for="language3"> JS </label><br><br>
+        <label for="language3"> JS </label><br>
         <input type="checkbox" id="language4" name="language4" value="Git">
         <label for="language4"> Git </label><br>
         <input type="checkbox" id="language5" name="language5" value="React">
@@ -34,23 +36,23 @@
         <input type="checkbox" id="language6" name="language6" value="Node.js">
         <label for="language6"> Node.js </label><br><br>
         
-      <input type="text" id="Github URL" name="github url"
+      <input type="text" id="github" name="github"
       placeholder="Github URL" size=50>
       <br><br>
       
-      <input type="text" id="Twitter URL" name="twitter url"
+      <input type="text" id="twitter" name="twitter"
       placeholder="Twitter URL" size=50>
       <br><br>
       
-      <input type="text" id="Favourite Books" name="fav books"
+      <input type="text" id="books" name="books"
       placeholder="Favourite Books (separated by comma)" size=100>
       <br><br>
       
-      <input type="text" id="Favourite Authors (separated by comma)" name="fav authors"
-      placeholder="Favourite Books (separated by comma)" size=100>
+      <input type="text" id="authors" name="authors"
+      placeholder="Favourite Author (separated by comma)" size=100>
       <br><br>
       
-      <button type="submit">Create Site</button>
+      <button href="" type="submit">Create Site</button>
       </form>
     </div>
 

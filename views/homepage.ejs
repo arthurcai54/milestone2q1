@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Armaan's DevCard</title>
+    <title>Arthur's DevCard</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/luxonauta/luxa@1.1/dist/expanded/luxa.css"
@@ -28,11 +28,9 @@
                     </div>
                     <div class="infos">
                       <span
-                        ><i class="fas fa-user-circle"></i>&nbsp;&nbsp;Armaan
-                        Dhanji</span
+                        ><i class="fas fa-user-circle"></i>&nbsp;&nbsp;<%= object.name %></span
                       ><span
-                        ><i class="fas fa-briefcase"></i>&nbsp;&nbsp;Full Stack
-                        Developer</span
+                        ><i class="fas fa-briefcase"></i>&nbsp;&nbsp;<%= object.about %></span
                       ><span
                         ><i class="fas fa-map-marker-alt"></i
                         >&nbsp;&nbsp;Vancouver, Canada</span
@@ -48,7 +46,7 @@
                 </div>
                 <div class="lx-card">
                   <div class="lx-row">
-                    <h1 class="title">Connect with Armaan</h1>
+                    <h1 class="title">Connect with Arthur</h1>
                     <div class="mini-cards">
                       <a
                         class="has-dflex-center bs-md"
@@ -72,7 +70,7 @@
               <div class="lx-row">
                 <div class="lx-row lx-card">
                   <h1 class="title">
-                    <i class="fas fa-info-circle"></i>&nbsp;Welcome to Armaan's
+                    <i class="fas fa-info-circle"></i>&nbsp;Welcome to <%= object.name.split(" ")[0] %>'s
                     corner of the Internet
                   </h1>
                 </div>
@@ -82,8 +80,8 @@
                   </h1>
                   <div class="text">
                     <p>
-                      Hi, my name is&nbsp;<b>Armaan Dhanji</b>, but I'm better
-                      known by my nickname&nbsp;<i>@armaand</i>, and I'm a
+                      Hi, my name is&nbsp;<b><%= object.name %></b>, but I'm better
+                      known by my nickname&nbsp;<i>@<%= object.github.split("/")[1] %></i>, and I'm a
                       teacher in the School of Computing at BCIT.
                     </p>
                     <p>
@@ -127,12 +125,14 @@
                   </h1>
                   <div class="text">
                     <ol>
-                      <li>
-                        <p>
-                          <b>The Lord of the Rings</b>&nbsp;- J. R. R. Tolkien
-                        </p>
-                      </li>
-                      <li>
+                      <% for (let i = 0; i < object.books.split(",").length;  i++ ) { %>
+                        <li>
+                          <p>
+                            <b><%= object.books.split(",")[i] %></b>&nbsp;- <%= object.authors.split(",")[i] %>
+                          </p>
+                        </li>
+                      <% } %>
+                      <!-- <li>
                         <p><b>Foundation series</b>&nbsp;- Isaac Asimov</p>
                       </li>
                       <li>
@@ -148,7 +148,7 @@
                         <p>
                           <b>A Brief History of Time</b>&nbsp;- Stephen Hawking
                         </p>
-                      </li>
+                      </li> -->
                     </ol>
                   </div>
                 </div>

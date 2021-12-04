@@ -18,18 +18,19 @@ app.get("/", (req, res) => {
 });
 
 app.post("/create", (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   fs.readFile("./database.json", "utf-8")
     .then((content) => JSON.parse(content))
-    .then((obj) => console.log(obj.users.push(req.body)))
-
-    .then(()=> fs.writeFile("./database.json", "utf-8"))
-  .catch((err) => console.log(err));
-  res.render("createcard");
-}) 
+    // .then((obj) => obj.users.push(req.body))
+    .then(() => fs.writeFile("./database.json", JSON.stringify(req.body)))
+    .catch((err) => console.log(err));
+  res.render("homepage", {object: req.body});
+});
 
 app.get("/people/:id", (req, res) => {
-  res.render("people");
+  var id = req.params.id;
+
+  res.render("people", {});
 });
 
 app.get("/:id/photos", (req, res) => {
